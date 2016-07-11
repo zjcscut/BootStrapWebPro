@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <link href="../static/js/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<%--jquery必须在bootstrap之前引入--%>
 <script src="../static/js/jquery/jquery.min.js"></script>
 <script src="../static/js/bootstrap/js/bootstrap.min.js"></script>
 
