@@ -14,6 +14,24 @@
         <div class="col-md-3 col-xs-3 col-md-3 col-lg-3" style="background-color: #2aabd2">占据三列</div>
         <div class="col-md-9 col-xs-9 col-md-9 col-lg-9" style="background-color: red">占据九列</div>
     </div>
+
+    <div class="row">
+        <%--col-*-*代表列的分布以及大小--%>
+        <div class="col-md-3 col-xs-3 col-md-3 col-lg-3" style="background-color: #2aabd2">
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt explicabo.
+            </p>
+        </div>
+        <div class="col-md-9 col-xs-9 col-md-9 col-lg-9" style="background-color: red"><p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+        </p></div>
+    </div>
 </div>
 </body>
 </html>

@@ -41,7 +41,7 @@
 
     <!--拦截静态资源 location为本地路径,mapping为映射路径-->
     <!--location必须为“/value/”形式-->
-    <mvc:resources location="/WEB-INF/static/" mapping="/static/**"/>
+    <mvc:resources location="/static/" mapping="/static/**"/>
     <!--<mvc:resources location="/js/" mapping="/js/**"/>-->
 
     <!--自定义Xss拦截器-->
