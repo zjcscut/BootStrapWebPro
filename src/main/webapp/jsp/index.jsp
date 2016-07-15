@@ -7,7 +7,7 @@
     <%@ include file="common/tag.jsp" %>
 </head>
 <body>
-<%--<img src="../static/img/pic1.png" class="img-responsive" alt="响应式图像"/>--%>
+
 <div class="container">
     <div class="row">
 
