@@ -1,6 +1,8 @@
 package cn.zjc.controller;
 
+import cn.zjc.entity.AreaData;
 import cn.zjc.entity.Clothes;
+import cn.zjc.entity.EchartsDataVO;
 import cn.zjc.entity.EchartsVO;
 import cn.zjc.utils.JsonUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -76,11 +78,40 @@ public class TestController {
     @RequestMapping(value = "city/json.html")
     @ResponseBody
     public Object getCityData() {
+		//模拟数据库
+    	List<AreaData> listData= new ArrayList<>();
+		listData.add(new AreaData(1,"福州",95));
+		listData.add(new AreaData(2,"太原",90));
+		listData.add(new AreaData(3,"长春",80));
+		listData.add(new AreaData(4,"重庆",70));
+		listData.add(new AreaData(5,"西安",60));
+		listData.add(new AreaData(6,"成都",50));
+		listData.add(new AreaData(7,"常州",40));
+		listData.add(new AreaData(8,"北海",20));
+		listData.add(new AreaData(9,"海口",10));
+
+		List<JSONObject> list = new ArrayList<>();
+		for (AreaData a: listData){
+			EchartsDataVO vo = new EchartsDataVO();
+			vo.setName(a.getName());
+			vo.setNum(a.getNum());
+			list.add(vo);
+		}
+
+
 //        Map<String, String> s = new HashMap<>();
-        JSONObject object = new JSONObject();
-        object.put("name","福州");
-        object.put("value","95");
-        return object;
+//		List<JSONObject> list = new ArrayList<>();
+//        JSONObject object = new JSONObject();
+//        object.put("name","福州");
+//        object.put("value","95");
+//		JSONObject objectGZ = new JSONObject();
+//		objectGZ.put("name","成都");
+//		objectGZ.put("value","50");
+//
+//		list.add(object);
+//		list.add(objectGZ);
+		System.out.println(list.toString());
+		return list.toString();
     }
 
 }

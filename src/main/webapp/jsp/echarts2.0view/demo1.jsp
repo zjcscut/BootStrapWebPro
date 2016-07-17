@@ -26,7 +26,7 @@
     //    });
 
 
-    var option = {
+    myChart.setOption({
         backgroundColor: '#1b1b1b',
         color: ['gold', 'aqua', 'lime'],
         title: {
@@ -239,32 +239,33 @@
                 }
             }
         ]
-    };
+    });
 
 
-    myChart.setOption(option);
-    getData();
-
-    function getData() {
-        var options = myChart.getOption();
-        $.getJSON("http://localhost:8080/city/json.html", function (data) {
-            options.series[1].markPoint.data = data;
-//            debugger
-            alert("---------------- " + options.series[1].markPoint.data + "--- "  +data);
-            myChart.setOption(options);
+//    http://localhost:8080/city/json.html
+    // 异步加载数据
+    $.getJSON('http://localhost:8080/city/json.html').done(function (data) {
+        // 填入数据
+        myChart.setOption({
+            series: [{}, {
+                markPoint: {
+                    data: data
+                }
+            }]
         });
-    }
+    });
 
-    //    {name: '福州', value: 95},
-    //    {name: '太原', value: 90},
-    //    {name: '长春', value: 80},
-    //    {name: '重庆', value: 70},
-    //    {name: '西安', value: 60},
-    //    {name: '成都', value: 50},
-    //    {name: '常州', value: 40},
-    //    {name: '北京', value: 30},
-    //    {name: '北海', value: 20},
-    //    {name: '海口', value: 10}
+
+    //        {name: '福州', value: 95},
+    //        {name: '太原', value: 90},
+    //        {name: '长春', value: 80},
+    //        {name: '重庆', value: 70},
+    //        {name: '西安', value: 60},
+    //        {name: '成都', value: 50},
+    //        {name: '常州', value: 40},
+    //        {name: '北京', value: 30},
+    //        {name: '北海', value: 20},
+    //        {name: '海口', value: 10}
 </script>
 
 <script type="text/javascript">
