@@ -1,4 +1,4 @@
-<%--存放公共引用文件--%>
+<%--公共jsp标签--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
